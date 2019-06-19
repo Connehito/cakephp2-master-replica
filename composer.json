@@ -1,0 +1,16 @@
+{
+    "name": "connehito/cakephp2-master-replica",
+    "description": "Provides the features for multiple database connections as master/replica and switching in Datasource.",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hideki Kinjyo",
+            "email": "dev@o0h.in"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    }
+}

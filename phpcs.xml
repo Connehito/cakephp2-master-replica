@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="CakePHP Core">
+    <file>./Model/</file>
+    <file>./Test/</file>
+    <config name="installed_paths" value="./vendor/cakephp/cakephp-codesniffer" />
+    <rule ref="CakePHP">
+    </rule>
+
+    <!-- Necessary for class aliases used for backwards compat -->
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <severity>0</severity>
+    </rule>
+</ruleset>

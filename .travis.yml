@@ -1,0 +1,47 @@
+language: php
+
+php:
+  - 5.6
+  - 7.1
+
+services:
+  - mysql
+
+env:
+  global:
+    - PLUGIN_NAME=MasterReplica
+    - REQUIRE=""
+    - DB=mysql
+    - COMPOSER_HOME=/home/travis/.composer
+
+  matrix:
+    - CAKE_VERSION=2.7
+    - CAKE_VERSION=2.8
+    - CAKE_VERSION=2.9
+    - CAKE_REF=2.x # cake2.x-latest
+
+matrix:
+  include:
+    - php: 7.2
+      env:
+        - USE_PHPUNIT_5=1
+        - CAKE_REF=2.x
+    - php: 7.3
+      env:
+        - USE_PHPUNIT_5=1
+        - CAKE_REF=2.x
+    - php: 7.3
+      env:
+        - PHPCS=1
+
+before_script:
+  - travis_wait ./travis_before_script.sh
+
+script:
+  - ../travis/script.sh
+
+after_success:
+  - ../travis/after_success.sh
+
+notifications:
+  email: false
