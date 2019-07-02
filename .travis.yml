@@ -15,21 +15,21 @@ env:
     - COMPOSER_HOME=/home/travis/.composer
 
   matrix:
-    - CAKE_VERSION=2.7
-    - CAKE_VERSION=2.8
-    - CAKE_VERSION=2.9
-    - CAKE_REF=2.x # cake2.x-latest
+    - CAKE_REF=2.7.11
+    - CAKE_REF=2.8.9
+    - CAKE_REF=2.9.9
+    - CAKE_REF=2.10.18
 
 matrix:
   include:
     - php: 7.2
       env:
         - USE_PHPUNIT_5=1
-        - CAKE_REF=2.x
+        - CAKE_REF=2.10.18
     - php: 7.3
       env:
         - USE_PHPUNIT_5=1
-        - CAKE_REF=2.x
+        - CAKE_REF=2.10.18
     - php: 7.3
       env:
         - PHPCS=1
