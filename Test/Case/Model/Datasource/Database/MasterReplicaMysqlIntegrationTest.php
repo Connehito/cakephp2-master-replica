@@ -31,8 +31,7 @@ if (!class_exists('DATABASE_CONFIG')) {
 }
 */
 
-class Post extends AppModel
-{
+class Post extends AppModel {
 
 	public $useDbConfig = 'default';
 }
@@ -42,27 +41,24 @@ class Post extends AppModel
  *
  * @property Post $Post
  */
-class MasterReplicaMysqlIntegrationTest extends CakeTestCase
-{
+class MasterReplicaMysqlIntegrationTest extends CakeTestCase {
 
 	public $fixtures = array(
 		'plugin.MasterReplica.post'
 	);
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function setUp()
-	{
+/**
+ * {@inheritdoc}
+ */
+	public function setUp() {
 		parent::setUp();
 		$this->Post = ClassRegistry::init('Post');
 	}
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function tearDown()
-	{
+/**
+ * {@inheritdoc}
+ */
+	public function tearDown() {
 		$conn = $this->Post->getDataSource();
 		$conn->switchConnectionRole('master');
 
@@ -72,15 +68,14 @@ class MasterReplicaMysqlIntegrationTest extends CakeTestCase
 		parent::tearDown();
 	}
 
-	/**
-	 * test switchConnectionRole()
-	 *
-	 * @expectedException PDOException
-	 * @expectedExceptionMessage UPDATE command denied to user
-	 * @return void
-	 */
-	public function testSwitchConnectionRole()
-	{
+/**
+ * test switchConnectionRole()
+ *
+ * @expectedException PDOException
+ * @expectedExceptionMessage UPDATE command denied to user
+ * @return void
+ */
+	public function testSwitchConnectionRole() {
 		/** @var MasterReplicaMysql $conn */
 		$conn = $this->Post->getDataSource();
 		$newData = [

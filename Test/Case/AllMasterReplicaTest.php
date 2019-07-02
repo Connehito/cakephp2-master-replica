@@ -3,16 +3,14 @@
 /**
  * All MasterReplicaPlugin plugin tests
  */
-class AllTest extends CakeTestCase
-{
+class AllMasterReplicaTest extends CakeTestCase {
 
-	/**
-	 * Suite define the tests for this plugin
-	 *
-	 * @return void
-	 */
-	public static function suite()
-	{
+/**
+ * Suite define the tests for this plugin
+ *
+ * @return CakeTestSuite Suite class instance.
+ */
+	public static function suite() {
 		$suite = new CakeTestSuite('All MasterReplicaPlugin test');
 
 		$path = CakePlugin::path('MasterReplica') . 'Test' . DS . 'Case' . DS;
