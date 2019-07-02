@@ -32,6 +32,11 @@ matrix:
         - CAKE_REF=2.10.18
     - php: 7.3
       env:
+        - USE_PHPUNIT_5=1
+        - CAKE_REF=2.10.18
+        - CODECOVERAGE=1
+    - php: 7.3
+      env:
         - PHPCS=1
 
 before_script:
