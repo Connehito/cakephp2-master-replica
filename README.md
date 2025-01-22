@@ -1,14 +1,13 @@
----
-# Repository Archived
 
+# [Archived] CakePHP Master Replica Plugin
 This project has been archived and is no longer actively maintained.
 The project has been archived due to that official support for CakePHP2 has ended several years ago.
 We appreciate the support and contributions from the community over the years.
 While this repository will remain available in read-only mode, there will be no further updates or maintenance.
 Thank you for your understanding and support.
----
 
-# CakePHP Master Replica Plugin
+------
+
 
 The datasource for CakePHP(2.x).This plugin enables one-connection to act as two(or more) roles, like master(read-write) and replica(read-only).
 
